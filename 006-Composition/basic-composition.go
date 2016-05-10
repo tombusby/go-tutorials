@@ -1,30 +1,31 @@
-
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 type Person struct {
-    Name string
+	Name string
 }
 
 func (p *Person) Introduce() {
-    fmt.Printf("Hi, I'm %s\n", p.Name)
+	fmt.Printf("Hi, I'm %s\n", p.Name)
 }
 
 type Saiyan struct {
-    *Person
-    Power int
+	*Person
+	Power int
 }
 
 func main() {
-    goku := &Saiyan{
-        Person: &Person{"Goku"},
-        Power: 9001,
-    }
+	goku := &Saiyan{
+		Person: &Person{"Goku"},
+		Power:  9001,
+	}
 
-    goku.Introduce()
+	goku.Introduce()
 
-    // Below are both equivalent
-    fmt.Println("Implicit:", goku.Name)
-    fmt.Println("Explicit:", goku.Person.Name)
+	// Below are both equivalent
+	fmt.Println("Implicit:", goku.Name)
+	fmt.Println("Explicit:", goku.Person.Name)
 }

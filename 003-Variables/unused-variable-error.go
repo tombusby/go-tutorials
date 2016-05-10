@@ -1,8 +1,10 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 func main() {
-    name, power := "Goku", 9000
-    fmt.Printf("default power is %d\n", power)
+	name, power := "Goku", 9000
+	fmt.Printf("default power is %d\n", power)
 }

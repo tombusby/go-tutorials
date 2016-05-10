@@ -1,12 +1,14 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 func getPower() int {
-    return 9001
+	return 9001
 }
 
 func main() {
-    power := getPower()
-    fmt.Printf("It's over %d\n", power)
+	power := getPower()
+	fmt.Printf("It's over %d\n", power)
 }
