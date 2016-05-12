@@ -22,6 +22,29 @@ func main() {
 	scores3[5] = 9033
 	fmt.Println(scores3)
 
+	// Unlike python/ruby, a slice points to the same array (not a copy)
+	scores4 := []int{1, 2, 3, 4, 5}
+	scores4_slice := scores4[2:4]
+	scores4_slice[0] = 999
+	fmt.Println(scores4)
+
+	// Re-slice the slice
+	scores5 := make([]int, 0, 10)
+	scores5 = scores5[0:6]
+	scores5[5] = 9033
+	fmt.Println(scores5)
+
+	// Unlike python/ruby, a slice points to the same array (not a copy)
+	scores6 := []int{1, 2, 3, 4, 5}
+	scores6_slice := scores6[2:4]
+	scores6_slice[0] = 999
+	fmt.Println(scores6)
+
+	// Go doesn't support python-style negative numbers in slices
+	scores7 := []int{1, 2, 3, 4, 5}
+	scores7 = scores7[:len(scores7)-1]
+	fmt.Println(scores7)
+
 	appendDemo()
 
 	counterIntuive()
